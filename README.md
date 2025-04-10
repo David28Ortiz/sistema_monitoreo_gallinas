@@ -14,7 +14,7 @@ El sistema permite detectar y realizar seguimiento a gallinas en tiempo real uti
 - Estimación de distancia recorrida y velocidad promedio por ave
 - Visualización de resultados en video
 
-## Descarga de datos y modelo
+# ⬇️Descarga de datos y modelo
 
 Los archivos necesarios para entrenar y ejecutar el modelo están disponibles en Google Drive:
 
@@ -22,26 +22,37 @@ Los archivos necesarios para entrenar y ejecutar el modelo están disponibles en
 - 📁 [Carpeta con imágenes y etiquetas de 'test'](https://drive.google.com/file/d/1KWgP9ra1Yayzjv5DUDaFv0tEj75a9yYh/view?usp=drive_link)
 - 🧠 [Modelo entrenado (best.pt)](https://drive.google.com/file/d/1XIeJ2GTzas29GmC-lJwOyC-2xG-ytjGR/view?usp=drive_link)
 
-Recuerda modificar las siguientes rutas de acceso en el código fuente ***'main.ipynb'***:
-- train_folder
+### 🔧 Rutas que debes modificar
 
-  "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/hen_detection_dataset/train/images"
-- label_folder
+Asegúrate de actualizar las siguientes rutas de acceso en el archivo `main.ipynb` para que coincidan con tu estructura de carpetas en Google Drive:
 
-  "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/hen_detection_dataset/train/labels"
+📁 Carpetas de entrenamiento
 
-- El archivo ***'data.yaml'*** también debe ser modificado con las rutas correspondientes.
+- Imágenes de entrenamiento:
+```python
+train_folder = "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/hen_detection_dataset/train/images"
+```
+- Etiquetas de entrenamiento:
+```python
+label_folder = "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/hen_detection_dataset/train/labels"
+```
+📄 Configuración de data.yaml
 
-  data='/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/data.yaml'
+- Actualiza el archivo `data.yaml` con sus respectivas rutas, junto con la siguiente línea de código:
+```python
+data = '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/data.yaml'
+```
+🖼️ Ruta de imágenes para test
+```python
+test_images_path = "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/test/images"
+```
+🧠 Modelo entrenado
 
-- test_images_path
+- Ruta al modelo `best.pt`:
+```python
+model = YOLO("/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/runs_model_x/weights/best.pt")
+```
 
-  '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/test/images'
-  
-- model
-
-  YOLO('/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/runs_model_x/weights/best.pt')
-  
 # 🎥 Demostraciones en video
 
 A continuación, se presentan los resultados del sistema sobre diferentes cantidades de gallinas en ambiente real:
