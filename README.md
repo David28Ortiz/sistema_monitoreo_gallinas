@@ -14,6 +14,16 @@ El sistema permite detectar y realizar seguimiento a gallinas en tiempo real uti
 - Estimación de distancia recorrida y velocidad promedio por ave
 - Visualización de resultados en video
 
+## Descarga de datos y modelo
+
+Los archivos necesarios para entrenar y ejecutar el modelo están disponibles en Google Drive:
+
+- 📁 [Carpeta con imágenes y etiquetas de 'train' y 'validation'](https://drive.google.com/file/d/1NRtM8FcAs_PjqvKGq4yR_r2_MWIJihgO/view?usp=drive_link)
+- 📁 [Carpeta con imágenes y etiquetas de 'test'](https://drive.google.com/file/d/1KWgP9ra1Yayzjv5DUDaFv0tEj75a9yYh/view?usp=drive_link)
+- 🧠 [Modelo entrenado (best.pt)](https://drive.google.com/file/d/1XIeJ2GTzas29GmC-lJwOyC-2xG-ytjGR/view?usp=drive_link)
+
+Recuerda colocarlos en la siguiente estructura de carpetas:
+
 # 🎥 Demostraciones en video
 
 A continuación, se presentan los resultados del sistema sobre diferentes cantidades de gallinas en ambiente real:
