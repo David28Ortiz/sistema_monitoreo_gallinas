@@ -55,7 +55,7 @@ model = YOLO("/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_dete
 
 ### 🎯 Modificación de rutas para seguimiento (tracking)
 ---
-Asegúrate de actualizar las siguientes rutas en el archivo principal de tracking, de acuerdo con el video a procesar:
+Asegúrate de actualizar las siguientes rutas en el archivo principal de tracking, de acuerdo con el video a procesar
 
 ```python
 # Ruta del video de entrada
