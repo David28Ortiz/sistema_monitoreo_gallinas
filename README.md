@@ -23,7 +23,7 @@ Los archivos necesarios para entrenar y ejecutar el modelo están disponibles en
 - 🧠 [Modelo entrenado (best.pt)](https://drive.google.com/file/d/1XIeJ2GTzas29GmC-lJwOyC-2xG-ytjGR/view?usp=drive_link)
 
 ### 🔧 Rutas que debes modificar
-
+---
 Asegúrate de actualizar las siguientes rutas de acceso en el archivo `main.ipynb` para que coincidan con tu estructura de carpetas en Google Drive:
 
 📁 Carpetas de entrenamiento
@@ -36,7 +36,7 @@ train_folder = "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_de
 ```python
 label_folder = "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/hen_detection_dataset/train/labels"
 ```
-📄 Configuración de data.yaml
+📄 Configuración de `data.yaml`
 
 - Actualiza el archivo `data.yaml` con sus respectivas rutas, junto con la siguiente línea de código:
 ```python
@@ -52,6 +52,47 @@ test_images_path = "/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov
 ```python
 model = YOLO("/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/runs_model_x/weights/best.pt")
 ```
+
+### 🎯 Modificación de rutas para seguimiento (tracking)
+---
+Asegúrate de actualizar las siguientes rutas en el archivo principal de tracking, de acuerdo con el video a procesar:
+
+```python
+# Ruta del video de entrada
+input_video = '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/Deep_SORT/deep_sort/videos/Vid_110_Gallinas.mp4'
+
+# Ruta del video de salida para ByteTrack
+output_path_bytetrack = '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/Deep_SORT/deep_sort/videos/Result_Vid_50_Gallinas_ByteTrack.mp4'
+
+# Ruta del video de salida para BotSORT
+output_path_botsort = '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/Deep_SORT/deep_sort/videos/Result_Vid_110_BotSORT.mp4'
+
+# Ruta del video con trayectoria dibujada
+trayectoria = '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/Deep_SORT/deep_sort/videos/Result_Vid_110T_BotSORT.mp4'
+```
+
+Asegúrate de que estas rutas correspondan con los nombres de los archivos de video según la cantidad de gallinas y el tipo de algoritmo de seguimiento utilizado.
+
+# 🧭 Flujo de ejecución recomendado
+
+Para obtener resultados completos del proceso de seguimiento y análisis de comportamiento, sigue el siguiente orden:
+
+1. Ejecutar `process_tracking()`
+
+  Esta función realiza el proceso de detección y tracking sobre el video de entrada, utilizando ya sea ByteTrack o BotSORT.
+
+2. Seleccionar el ID de la gallina a analizar
+
+  Una vez completado el tracking, identifica el ID de la gallina sobre la cual deseas analizar la trayectoria.
+
+3. Ejecutar `draw_trajectory(id)`
+
+  Esta función dibuja la trayectoria completa de la gallina seleccionada en un nuevo video, permitiendo visualizar su movimiento a lo largo del tiempo.
+
+4. Ejecutar `plot_metrics(id)`
+
+Esta función genera gráficos relacionados con el comportamiento del ave, como distancia recorrida y velocidad promedio.
+
 
 # 🎥 Demostraciones en video
 
