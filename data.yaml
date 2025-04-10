@@ -1,0 +1,12 @@
+train: /content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/hen_detection_dataset/train/images
+val: /content/drive/MyDrive/Colab Notebooks/yolov8_tracking/yolov8_detection/hen_detection_dataset/valid/images
+
+nc: 1
+names: ['0']
+
+roboflow:
+  workspace: avicola
+  project: deteccion_gallinas
+  version: 11
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/avicola/deteccion_gallinas/dataset/11
