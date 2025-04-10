@@ -71,8 +71,6 @@ output_path_botsort = '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/De
 trayectoria = '/content/drive/MyDrive/Colab Notebooks/yolov8_tracking/Deep_SORT/deep_sort/videos/Result_Vid_110T_BotSORT.mp4'
 ```
 
-Asegúrate de que estas rutas correspondan con los nombres de los archivos de video según la cantidad de gallinas y el tipo de algoritmo de seguimiento utilizado.
-
 # 🧭 Flujo de ejecución recomendado
 
 Para obtener resultados completos del proceso de seguimiento y análisis de comportamiento, sigue el siguiente orden:
